@@ -42,7 +42,9 @@ class UserController extends Controller
         $validasi = Validator::make($request->all(), [
             'name'  => 'required|min:5|string',
             'email' => 'email|required|unique:users',
-            'password' => 'required|confirmed|min:6'
+            'password' => 'required|confirmed|min:6',
+            'role' =>'required',
+            'status' =>'required'
         ])->validate();
 
         $request->merge([

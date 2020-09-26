@@ -68,6 +68,7 @@
                                 </div>
                             </div>
 
+
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Gudang</label>
@@ -76,6 +77,13 @@
                                             <option value="{{$item->id}}" {{isset($barang) ? $barang->gudang_id == $item->id ? 'selected' : '' : ''}}>{{$item->nama_gudang}}</option>
                                         @endforeach
                                     </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Harga</label>
+                                    <input type="number" name="harga" value="{{isset($barang) ? $barang->harga : ' ' }}" id="" class="form-control">
                                 </div>
                             </div>
                             
